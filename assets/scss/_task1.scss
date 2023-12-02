@@ -1,0 +1,365 @@
+body{
+    background-color: lighten($color: black, $amount: 40);
+}
+.orderSummaryModal{
+    & .modal-dialog{
+        @include sm {
+            max-width: 600px;
+        }
+        @include lg {
+            --bs-modal-width: 90%;
+            max-width: 950px;
+        }
+        @include xl {
+            --bs-modal-width: 950px;
+        }
+        & .modal-content{
+            // width: 1248px;
+            // height: 814px;
+            // padding: 145px 175px 45px 174px;
+            padding: 0 20px;
+            @include sm{
+                padding:  0 30px;
+            }
+            @include md{
+                padding: 0px 40px;
+            }
+            @include lg{
+            }
+            @include xl{
+            }
+            & .modal-header{
+                & .btnWrapper{
+                    border-bottom: 2px solid #dee2e6;
+                    overflow-x: auto;
+                    flex-wrap: nowrap;
+                    display: flex;
+                    white-space: nowrap;
+                    &::-webkit-scrollbar {
+                        display: none;
+                    }
+                    @include sm{
+                        width: 100px;
+                    }
+                }
+                & .modalBtn{
+                    background-color: unset;
+                    font-family: "open Sans";
+                    font-size: 16px;
+                    font-weight: 700;
+                    letter-spacing: 1.2px;
+                    padding: 25px 0;
+                    width: 100%;
+                    padding-right: 8px;
+                    border-bottom: 4px solid #6dc899 !important;
+                    @include sm{
+                        width: 100%;
+                        padding-right: 8px;
+                    }
+                    @include lg{
+                        width: 100%;
+                        padding-right: 20px;
+                    }
+                    &.active{
+                        color: #d1d5dc;
+                        border-bottom: 0 !important;
+                    }
+                    & img{
+                        width: 15px;
+                        object-fit: contain;
+                        height: 15px;
+                        margin-right: 5px;
+                    }
+                }
+            }
+            & .modal-body{
+                padding: 20px 0px !important;
+                & .ordersummaryHeading{
+                    font-family: Montserrat;
+                    font-size: 16px;
+                    font-weight: normal;
+                    font-stretch: normal;
+                    font-style: normal;
+                    line-height: 3.25;
+                    letter-spacing: 1.6px;
+                    color: #2a303e;
+                    & img{
+                        height: 15px;
+                        width: 15px;
+                        object-fit: contain;
+                        margin-right: 8px;
+                    }
+                }
+                & .orderSummaryWrapper{
+                    border: 1px solid  rgba(#b7b7b7, .22);
+                    border-radius: 10px;
+                    // height: 465px;
+                    width: 100%;
+                    & .orderSummaryInner{
+                        padding: 20px;
+                        @include sm{
+                        }
+                        @include md{
+                            padding: 40px 30px 0 30px;
+                        }
+                        @include lg{
+                        }
+                        @include xl{
+                        }
+                    & .innerTxt{
+                        font-size: 12.5px;
+                        line-height: 20.5px;
+                        letter-spacing: 1.25px;
+                        color: #2a303e;
+                        font-weight: 700;
+                        // font-family: 'Montserrat-Bold';
+                        & span{
+                            letter-spacing: 0.9px;
+                            color: #3663d6;
+                            font-size: 10px;
+                            margin-left: 20px;
+                        }
+                    }
+                    & .innerSubTxt{
+                        font-family: 'Open Sans';
+                        font-size: 16px;
+                        font-weight: normal;
+                        font-stretch: normal;
+                        font-style: normal;
+                        line-height: 1.25;
+                        letter-spacing: normal;
+                        color: #2a303e;
+                        & span{
+                            & img{
+                                height: 15px;
+                                margin-left: 5px;
+                            }
+                        }
+                    }
+                    & .month{
+                        font-size: 18px;
+                        font-weight: 600;
+                        width: 90px;
+                        color: #5d6a8b;
+                        & span{
+                            font-family: 'Open Sans';
+                            font-size: 14px;
+                        }
+                    }
+                    & .divider{
+                        width: 100%;
+                        height: 1px;
+                        background-color: #cfd0db;
+                        opacity: 0.3;
+                        margin: 30px 0;
+                    }
+                    & .due{
+                        font-family: 'Open Sans';
+                        font-size: 22px;
+                        color: #5d6a8b;
+                        line-height: 1.45;
+                        margin-bottom: 0;
+                        @include sm{
+                        }
+                        @include md{
+                            margin-bottom: 30px;
+                        }
+                        @include lg{
+                        }
+                        @include xl{
+                            
+                        }
+                        & span{
+                            color: #586074;
+                            font-size: 22px;
+                            font-weight: 600;
+                        }
+                    }
+                    }
+                    & .discriptionWrapper{
+                        background-color: rgba($color: #dedfe5, $alpha: 0.3);
+                        border-radius: 0 0 6px 6px;
+                        position: relative;
+                        overflow: hidden;
+                        padding: 20px;
+                        @include sm{
+                        }
+                        @include md{
+                            padding: 30px 40px;
+                        }
+                        @include lg{
+                        }
+                        @include xl{
+                            
+                        }
+                        &.discriptionWrapperr{
+                            padding: 20px;
+                            @include sm{
+                            }
+                            @include md{
+                                padding: 30px !important;
+                            }
+                            @include lg{
+                            }
+                            @include xl{
+                                
+                            }
+                            &::after{
+                                display: none;
+                            }
+                        }
+                        &::after{
+                            content: '';
+                            background-image: url(../img/infoBig.png);
+                            background-repeat: no-repeat;
+                            background-size: contain;
+                            width: 160px;
+                            height: 150px;
+                            background-position: bottom;
+                            position: absolute;
+                            bottom: -23px;
+                            right: -32px;
+                            z-index: 1;
+                        }
+                        & .discription{
+                            color: #5d6a8b;
+                            font-size: 16px;
+                            line-height: 24px;
+                            font-family: 'Open Sans';
+                            z-index: 2;
+                            position: relative;
+                            & .break{
+                                margin-bottom: 20px;
+                            }
+                        }
+                        & .form-check{
+                            & .form-check-input{
+                                accent-color: #6dc899;
+                            }
+                            & .form-check-label{
+                                font-size: 13px;
+                                color: black;
+                                font-weight: 600;
+                                margin-left: 8px;
+                            }
+                        }
+                    }
+                    & .formInp{
+                        // border-bottom: 1px solid #42455d !important;
+                        border-bottom: 1px solid #d9d9dc !important;
+                        border-radius: 0;
+                        font-size: 13px;
+                        letter-spacing: 1.3px;
+                        padding-left: 0;
+                        padding-bottom: 16px;
+                        &::placeholder{
+                            color: rgba(19, 22, 39, 0.85);
+                        }
+                    }
+                }
+                & .links{
+                    & img{
+                        width: 100%;
+                        height: 50px;
+                        object-fit: contain;
+                    }
+                }
+                & .orderBtn{
+                    background-color:  #6dc899;
+                    border: 0;
+                    border-radius: 10px;
+                    width: 100%;
+                    font-size: 14px;
+                    letter-spacing: 1.45px;
+                    color: white;
+                    font-weight: 600;
+                    height: 50px;
+                    @include sm{
+                    }
+                    @include md{
+                        height: 67px;
+                    }
+                    @include lg{
+                    }
+                    @include xl{
+                        
+                    }
+                }
+                & .greetings{
+                    color: #65c593;
+                    font-weight: 700;
+                    font-family:'open Sans';
+                    font-size: 28px;
+                    @include sm{
+                    }
+                    @include md{
+                        font-size: 30px;
+                    }
+                    @include lg{
+                    }
+                    @include xl{
+                    }
+                }
+                & .subGreetings{
+                    color: #1f2436;
+                    font-size: 14px;
+                    font-weight: 700;
+                    // font-family: 'Montserrat-Bold';
+                    @include sm{
+                    }
+                    @include md{
+                        font-size: 15px;
+                    }
+                    @include lg{
+                    }
+                    @include xl{
+                    }
+                }
+                & .frame{
+                    width: 100%;
+                    height: 286px;
+                    & img{
+                        width: 100%;
+                        height: 100%;
+                        object-fit: contain;
+                    }
+                }
+                & .text{
+                    color: #1f2436;
+                    text-align: center;
+                    font-family: 'Open Sans';
+                    font-size: 15px;
+                    @include sm{
+                    }
+                    @include md{
+                        font-size: 18px;
+                    }
+                    @include lg{
+                    }
+                    @include xl{
+                    }
+                    & .anchor{
+                        color: #807fd6;
+                        text-decoration: none;
+                    }
+                }
+                & .textt{
+                    font-family: 'open Sans';
+                    font-size: 14px;
+                    color: #1f2436;
+                    text-align: center;
+                    font-style: italic;
+                    @include sm{
+                    }
+                    @include md{
+                        font-size: 16px;
+                    }
+                    @include lg{
+                    }
+                    @include xl{
+                    }
+                }
+            }
+        }
+    }
+}
